@@ -255,8 +255,10 @@ class Splash extends Component {
                 </div> */}
 
                 <div>
-                  <GoogleAd slot="6552881547" googleAdId="ca-pub-5645705217995911" />
+                  <GoogleAd slot="9492391764" googleAdId="ca-pub-5645705217995911" />
                 </div>
+
+                <br/>
 
                 <div className="link-btn">
                   <a id="abcd" target="_blank">
@@ -304,8 +306,8 @@ class Splash extends Component {
               </Card>
             </div> */}
 
-        {/* <GoogleAd slot="9492391764" googleAdId="ca-pub-5645705217995911" />
-          <br /> */}
+        <GoogleAd slot="9492391764" googleAdId="ca-pub-5645705217995911" />
+          
 
         {/* <div className="yt-col">
               <Card
