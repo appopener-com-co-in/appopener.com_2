@@ -226,12 +226,13 @@ class Splash extends Component {
               <div className="profile">
                 <div className="bio-info">
                   {/* <h2 style={{color:'white'}}>APPOPENER &#8594;	 OPNR.APP</h2> */}
-                  <h2 style={{ color: "white", fontSize: "13px" }}>
+                  {/* <h2 style={{ color: "white", fontSize: "13px" }}>
                     <b>~ by Dr. DANDY</b>
-                  </h2>
+                  </h2> */}
+
                 </div>
 
-                <div className="social-links">
+                {/* <div className="social-links">
                   <a href="https://opnr.app/yt/8gqth12j3">
                     <img src={yt} />
                   </a>
@@ -244,13 +245,17 @@ class Splash extends Component {
                   <a href="mailto:namanlies@gmail.com">
                     <img src={mail} />
                   </a>
-                </div>
+                </div> */}
 
-                <div className="bio-text">
+                {/* <div className="bio-text">
                   <p>
                     (A next generation PWA to overpower next web 3.0 revolution
                     to rescue human research and resources for evolution)
                   </p>
+                </div> */}
+
+                <div>
+                  <GoogleAd slot="6552881547" googleAdId="ca-pub-5645705217995911" />
                 </div>
 
                 <div className="link-btn">
@@ -281,9 +286,6 @@ class Splash extends Component {
         {/* <div style={{ color: "white", padding: "10px", fontSize: "20px" }}>
             Watch and have fun:
           </div> */}
-
-        
-          <GoogleAd slot="6552881547" googleAdId="ca-pub-5645705217995911" />
         
         {/* <div className="yt-col">
               <Card
