@@ -232,7 +232,7 @@ class Splash extends Component {
 
                 </div>
 
-                {/* <div className="social-links">
+                <div className="social-links">
                   <a href="https://opnr.app/yt/8gqth12j3">
                     <img src={yt} />
                   </a>
@@ -245,7 +245,7 @@ class Splash extends Component {
                   <a href="mailto:namanlies@gmail.com">
                     <img src={mail} />
                   </a>
-                </div> */}
+                </div>
 
                 {/* <div className="bio-text">
                   <p>
@@ -254,9 +254,7 @@ class Splash extends Component {
                   </p>
                 </div> */}
 
-                <div>
-                  <GoogleAd slot="9492391764" googleAdId="ca-pub-5645705217995911" />
-                </div>
+                
 
                 <br/>
 
@@ -278,6 +276,10 @@ class Splash extends Component {
           </div>
         </div>
 
+        <div>
+                  <GoogleAd slot="9492391764" googleAdId="ca-pub-5645705217995911" />
+                </div>
+
         {/* <div className="bio-text-2">
           <p>
             Want a boost to your video?<br/> Publish your videos @Creators.College
@@ -289,7 +291,7 @@ class Splash extends Component {
             Watch and have fun:
           </div> */}
         
-        {/* <div className="yt-col">
+        <div className="yt-col">
               <Card
                 sx={{ height: 315, marginBottom: "20px", borderRadius: "30px" }}
                 className="splash-card"
@@ -297,14 +299,14 @@ class Splash extends Component {
                 <iframe
                   width="100%"
                   height="315"
-                  src="https://www.youtube.com/embed/SzSYzHsml0U"
+                  src="https://www.youtube.com/embed/BtFjvDv1KEo"
                   title="YouTube video player"
                   frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowfullscreen
                 ></iframe>
               </Card>
-            </div> */}
+            </div>
 
         <GoogleAd slot="9492391764" googleAdId="ca-pub-5645705217995911" />
           
