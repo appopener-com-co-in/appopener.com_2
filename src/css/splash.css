@@ -1,546 +1,121 @@
-
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates&family=Montserrat:wght@400;500;600;700;800;900&display=swap');
-body {
-  margin: 0;
-  /* overflow: hidden; */
-  font-family: 'Montserrat Alternates', sans-serif;
-  /* -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  scroll-behavior: smooth;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow-x: visible;
-  background-color: #000; */
-  background: linear-gradient(109.6deg, rgb(36, 45, 57) 11.2%, rgb(16, 37, 60) 51.2%, rgb(0, 0, 0) 98.6%);
-}
-.App{
-/* 
-  /* background: rgb(32,33,36);
-  background: linear-gradient(180deg, rgba(32,33,36,1) 99.2%, rgb(255, 255, 255) 100%); */ 
-}
-.container-1{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
- 
-}
-.wrap-img{
-  background: rgb(2,0,36);
-background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 33%, rgba(23,103,154,1) 100%, rgba(51,173,198,1) 100%);
-}
-.container-1 > img {
-  max-width: 85px;
-}
-.container-1 > span {
-  margin: -15px 0 5px 0;
-  font-size: 17px;
-}
-.container-1 > a {
-  font-size: 28px;
-  font-weight: 600;
-  max-width: 100%;
-  text-align: center;
-  color:#0082e5;
-  text-decoration: none;
-}
-/* .container-1 > button {
-  font-size: 23px;
-  font-weight: 800;
-  margin-top: 18px;
-  padding: 15px 50px;
-  background-color: #1B1B1B;
-  color: #fff;
-  border: 0;
-  border-radius: 15px;
-  cursor: pointer;
-} */
-.container-2{
-  background: linear-gradient(109.6deg, rgb(36, 45, 57) 11.2%, rgb(16, 37, 60) 51.2%, rgb(0, 0, 0) 98.6%);
-  background: rgb(32,33,36);
-  background: linear-gradient(180deg, rgba(32,33,36,1) 99.2%, rgb(255, 255, 255) 100%);
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+/* .text {
+    color: #ff0000;
+    font-family: system-ui;
+    font-size: 20px;
+    font-weight: normal;
+    text-align: center;
+    text-shadow: 0 1px 1px #fff;
 }
 
-.splash-card{
-
-  
-  position: relative;
-  /* left: 50px; */
-  /* background: #fff; */
-  background: #B8C6DB;
-  /* background: radial-gradient(100% 100% at 0% 0%, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
-  box-shadow: inset -5px -5px 250px rgba(255, 255, 255, 0.02);
-  backdrop-filter: blur(21px);
-  border-radius: 32px;
-  border: 1px solid rgba(131, 143, 180, 0.37);
-  margin-bottom: 20px;
-  
- 
-}
-.yt-card{
-  
-  width: 500px;
-  /* left: 50px; */
-  /* background: #fff; */
-  background: #B8C6DB;
-  /* background: radial-gradient(100% 100% at 0% 0%, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
-  box-shadow: inset -5px -5px 250px rgba(255, 255, 255, 0.02);
-  backdrop-filter: blur(21px);
-  border-radius: 32px;
-  border: 1px solid rgba(131, 143, 180, 0.37);
-  
-}
-.yt-card:hover{
-  background-color: #0082e5;
-  opacity: 0.5;
-}
-.hel{
-  position: relative;
-  top: -90px;
-}
-.card-space{
-  background: linear-gradient(109.6deg, rgb(36, 45, 57) 11.2%, rgb(16, 37, 60) 51.2%, rgb(0, 0, 0) 98.6%);
-}
-.card-space p{
-  
-  font-family: Montserrat;
-  font-weight: 700;
-  color: #fff;
-}
-.subs-btn{
-  font-family: 'Montserrat';
-font-style: normal;
-font-weight: 600;
-font-size: 20px;
-line-height: 24px;
-text-align: center;
-
-color: #FFFFFF;
-}
-.share-btn-card{
-  position: relative;
-  left:20px;
-  border-radius: 35%;
-  border-style: 2px solid black;
-  width: 80px;
-  height:50px;
-  background: linear-gradient(109.6deg, rgb(36, 45, 57) 11.2%, rgb(16, 37, 60) 51.2%, rgb(0, 0, 0) 98.6%);
-}
-.share-btn{
-  font-family: 'Montserrat';
-font-style: normal;
-font-weight: 600;
-font-size: 20px;
-line-height: 24px;
-text-align: center;
-background:#fff;
-border-radius: 10px;
-width: 91px;
-height: 39.77px;
-position:relative;
-top:-80px;
-left:265px;
-
-color: #000000;
-
-}
-.ribbon {
-  width: 150px;
-  height: 150px;
-  overflow: hidden;
-  position: absolute;
-}
-.ribbon::before,
-.ribbon::after {
-  position: absolute;
-  z-index: -1;
-  content: '';
-  display: block;
-  border: 5px solid #2980b9;
-}
-.ribbon span {
-  position: absolute;
-  display: block;
-  width: 225px;
-  padding: 15px 0;
-  background-color:red;
-  box-shadow: 0 5px 10px rgba(0,0,0,.1);
-  color: #fff;
-  font: 700 18px/1 'Lato', sans-serif;
-  text-shadow: 0 1px 1px rgba(0,0,0,.2);
-  text-transform: uppercase;
-  text-align: center;
-}
-.play { 
-  background: red;
-  border-radius: 50% / 10%;
-  color: #FFFFFF;
-  font-size: 1em; /* change this to change size */
-  height: 3em;
-  /* margin: 20px auto; */
-  padding: 0;
-  position: absolute;
-  top: 100px;
-  left: 220px;
-  text-align: center;
-  text-indent: 0.1em;
-  transition: all 150ms ease-out;
-  width: 4em;
-
+.footer {
+    bottom: 5%;
+    position: fixed;
+    text-align: center;
+    left: 0;
+    right: 0;
 }
 
-
-.play:hover {
-  background: darkorange;
+.rotate {
+    transform: rotate(-5deg);
 }
 
-.play::before { 
-  background: inherit;
-  border-radius: 5% / 50%;
-  bottom: 9%;
-  content: "";
-  left: -5%;
-  position: absolute;
-  right: -5%;
-  top: 9%;
-}
-
-.play::after {
-  border-style: solid;
-  border-width: 1em 0 1em 1.732em;
-  border-color: transparent transparent transparent rgba(255, 255, 255, 0.75);
-  content: ' ';
-  font-size: 0.75em;
-  height: 0;
-  margin: -1em 0 0 -0.75em;
-  top: 50%;
-  position: absolute;
-  width: 0;
-}
-
-/* top left*/
-.ribbon-top-left {
-  top: -10px;
-  left: -10px;
-}
-.ribbon-top-left::before,
-.ribbon-top-left::after {
-  border-top-color: transparent;
-  border-left-color: transparent;
-}
-.ribbon-top-left::before {
-  top: 0;
-  right: 0;
-}
-.ribbon-top-left::after {
-  bottom: 0;
-  left: 0;
-}
-.ribbon-top-left span {
-  right: -25px;
-  top: 30px;
-  transform: rotate(-45deg);
-}
-.cover img{
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-  }
-.img-logo{
-  position: relative;
-  top: 40px;
-  right: 120px;
-}
-.bio-info h2{
-  color:white;
-  font-size: 20px;
-  position: relative;
-  
-}
-
-.circle{
-  position: relative;
-  margin-bottom: -80px;
-}
-
-.social-links{
-  position: relative;
-  
-}
-.social-links img{
-  padding: 10px;
-  width: 80px;
-}
-.bio-text {
-  width: auto;
-  font-family: Montserrat;
-  color: #fff;
- font-size: 15px;
- text-align: center;
- position: relative;
- 
-
-}
-
-.bio-text-2 {
-  width: auto;
-  font-family: Montserrat;
-  color: #fff;
- font-size: 23px;
- text-align: center;
- position: relative;
- 
-
-}
-.bio-text p{
-  font-family: Montserrat;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /* position: relative;
-  right: 30px; */
-}
-.link-btn {
-  position: relative;
- 
- border-style: none;
-
-
-}
-.link-btn a{
-  text-decoration: none;
-}
-.link-btn button{
-  background: #40B6F8;
-box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
-border-radius: 15.5px;
-width: 241px;
-height: 35px;
-color: #000;
-font-weight: 700;
-font-family: Montserrat;
-text-decoration: none;
-margin-bottom: 30px;
-}
-.subscribe-section{
-  color: #fff;
-  /* float: left; */
-  background-color: black;
-  width: auto;
-}
-.subscribe-section img{
-  width: 30%;
-}
-.subscribe-section h3{
-  position: relative;
-  bottom: -40px;
-  left: -70px;
-  float: right;
-  color: #fff;
-}
-.subscribe-section button{
-  position: relative;
-  bottom: -40px;
-  right: -100px;
-}
-.yt-preview{
-  margin-top: 30px;
-}
-.yt-direct-btn button{
-  padding: 0.5rem 0rem;
-  width: 100px;
-  /* position: relative;
-  left: 70px;
-  top: -30px; */
-  border-radius: 55px;
-  background: linear-gradient(109.6deg, rgb(36, 45, 57) 11.2%, rgb(16, 37, 60) 51.2%, rgb(0, 0, 0) 98.6%);
-  /* transition: all 0.2s ease-in-out; */
-}
-.yt-btn:hover{
-  background: rgb(68, 68, 169);
-  color: white;
-  width: 270px;
-  /* transition: all 0.2s ease-in-out; */
-  position: relative;
-  /* right: -120px; */
-  /* left:85px; */
-
-}
-.yt-btn:hover::before{
-  content: "View on Youtube";
-  font-size: 20px;
-  /* top:40px;
-  right:-200px; */
-  
-
-}
-.yt-btn:hover::after{
-  position: relative;
- top:-40px;
- right:-200px;
-}
-.yt-direct-btn button img{
-  transform: rotate(45deg);
-}
-
-.share-options{
-  list-style: none;
-  width: 60px;
-}
-.share-options li{
- 
-  position: relative;
-  top:-160px;
-  left: 320px;
-  padding: 5px;
-  background: cornsilk;
-
-}
-.share-options a{
- text-decoration: none;
-
-}
-
-
-.yt-row{
-  margin: 0 -5px;
-}
-.yt-col{
-  float: center;
-  width: 32%;
-  padding: 0 18px;
-}
-@media screen and (max-width: 600px) {
-  .yt-col{
-    width: 99%;
-    display: block;
-    margin-bottom: 20px;
-  }
-}
-@media(max-width: 320px){
-  
-
-  .bio-text{
-    position: relative;
-    
-  }
-  .yt-direct-btn{
-    position: relative;
-    margin-left: 50px;
-    right: 60px;
-  }
-  .yt-btn:hover{
-    width: 150px;
-  }
-  .yt-btn:hover::before{
-    content: "Go to Youtube";
-    font-size: 14px;
-  
-  }
-  .container-1 > img {
-    max-width: 55px;
-  }
-  .container-1 > a {
-    max-width: 100%;
-  }
-  .container-1 > button {
-    font-size: 14px;
-    font-weight: 800;
-    margin-top: 18px;
-    padding: 15px 40px;
-    background-color: #1B1B1B;
-    color: #fff;
-    border: 0;
-    border-radius: 15px;
-    cursor: pointer;
-  }
-}
-
-@media (min-width: 350px) and (max-width:399px){
-  .yt-col{
-    width: 99%;
-  }
-  .yt-card{
-    position:relative;
-    left: 65px;
-    width: 370px;
-    bottom: 40px
-  }
-  
- 
-  
-  .bio-text{
-    position: relative;
-    
-  }
-  .yt-direct-btn{
-    position: relative;
-    margin-left: 50px;
-  }
-  .yt-btn:hover{
-    width: 170px;
-  }
-  .yt-btn:hover::before{
-    content: "Open in Youtube";
-    font-size: 14px;
-  
-  }
-  .share-btn{
-    position: relative;
-    left: 200px;
-  }
-  .yt-direct-btn {
-    position: relative;
-    left: -50px;
-  }
-  /* .splash-card{
-    width: 360px;
-  }
-  .splash-card iframe{
+#sticker {
     width: 100%;
-  } */
+    max-width: 400px;
+    height: auto;
 }
-@media (min-width: 400px) and (max-width:425px){
-  .yt-card{
-    position:relative;
-    left: 50px;
-    width: 400px;
-  }
-  .yt-btn:hover::before{
-    content: "Open in Youtube";
-    font-size: 14px;
-    
-  }
-  .yt-btn:hover{
-    
-    width: 170px;
-  }
-  .bio-text{
-    position: relative;
-    
-  }
-  /* .splash-card{
-    width: 360px;
-  }
-  .splash-card iframe{
+.splash_poster{
     width: 100%;
-  } */
+    max-width: 300px;
+    height: auto;
+    max-height: 500px;
+    border-radius: 5px;
 }
-@media (max-width: 320px){
-  
-  /* .splash-card{
-    width: 290px;
-  }
-  .splash-card iframe{
-    width: 280px;
-  } */
+.title-text{
+    color:black;
+    text-align: center;
+    font-family: 'Be Vietnam Pro', sans-serif;
 }
+ */
+
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+ body {
+   margin: 0;
+   font-family: 'Poppins','Roboto','Ubuntu','sans-serif';
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+   scroll-behavior: smooth;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   overflow-x: hidden;
+   background-color: #000;
+ }
+ .App{
+   max-width: 500px;
+   background-color: #fff;
+ }
+ .container-1{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   margin-bottom: 30px;
+ }
+ .container-1 > img {
+   max-width: 85px;
+ }
+ .container-1 > span {
+   margin: -15px 0 5px 0;
+   font-size: 17px;
+ }
+ .container-1 > a {
+   font-size: 21px;
+   font-weight: 600;
+   max-width: 60%;
+   text-align: center;
+   color: black;
+ }
+ .container-1 > button {
+   font-size: 23px;
+   font-weight: 800;
+   margin-top: 18px;
+   padding: 15px 50px;
+   background-color: #1B1B1B;
+   color: #fff;
+   border: 0;
+   border-radius: 15px;
+   cursor: pointer;
+ }
+ .container-2{
+   background-color: #fff;
+   position: relative;
+ }
+ 
+ /* .embeded{
+   width: auto;
+ } */
+ 
+ .lottie-container{
+   position: absolute;
+   top: 30%;
+ }
+ @media(max-width: 320px){
+   .container-1 > img {
+     max-width: 55px;
+   }
+   .container-1 > a {
+     max-width: 100%;
+   }
+   .container-1 > button {
+     font-size: 14px;
+     font-weight: 800;
+     margin-top: 18px;
+     padding: 15px 40px;
+     background-color: #1B1B1B;
+     color: #fff;
+     border: 0;
+     border-radius: 15px;
+     cursor: pointer;
+   }
+ }

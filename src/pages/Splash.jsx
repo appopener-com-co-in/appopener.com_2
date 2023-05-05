@@ -1,154 +1,18 @@
-// import { Component } from "react";
-// import React from "react";
-// import classes from "../components/Styles.module.css";
-// import { getURLandredirect } from "../helper/api";
-// import "../css/splash.css";
-// import logo from "../assets/logo.avif";
-// import new_logo from "../assets/Omni-logo.avif";
-// import deetmelogo from "../assets/deet-me-logo.avif";
-// import DeetLogo from "../assets/deet-logo.avif";
-// import AdUI from "../assets/ui.avif";
-// import deetpng from "../assets/deet.png"
-// import spaceman from "../assets/footer-space-man.avif"
-// import appopener_text from "../assets/ac.avif";
-// import GoogleAd from "../components/GoogleAd";
-// //import splash_adv from "../assets/splash/splash_adv.avif";
-
-// class Splash extends Component {
-//   constructor(props) {
-//     super(props);
-//     this.state = { intentvalue: "", original_url: "", ostype: "" };
-//   }
-
-//   componentDidMount() {
-//     console.log("Here");
-//     let apptag = this.props.match.params.apptype;
-//     let shortstring = this.props.match.params.shorturl;
-//     getURLandredirect(apptag, shortstring).then((res) => {
-//       this.setState({ intentvalue: res.data.app_intend });
-//       this.setState({ original_url: res.data.originalURL });
-//       this.setState({ ostype: res.data.os_type });
-//       this.setState({ createdAt: res.data.created_at});
-//       let app_intend = this.state.intentvalue;
-//       let originalURL = this.state.original_url;
-
-//       const urlDate = new Date(this.state.createdAt);
-//       console.log(this.state.createdAt);
-//       const finalDate = new Date("2033-01-07");
-
-//       // TEST
-//       // let anchor = document.createElement("a");
-//       // anchor.setAttribute("href", "https://www.google.com/");
-//       // anchor.dispatchEvent(new MouseEvent('mousedown'));
-//       // anchor.dispatchEvent(new MouseEvent('mouseup'));
-//       // anchor.click();
-
-//       if (urlDate <= finalDate){
-//         console.log("here");
-//         var newLink = "https://opnr.app/" + apptag + "/" + shortstring;
-//         console.log(newLink);
-//         let anchor = document.createElement("a");
-//         anchor.setAttribute("href", newLink);
-//         console.log(anchor);
-//         anchor.dispatchEvent(new MouseEvent('mousedown'));
-//         anchor.dispatchEvent(new MouseEvent('mouseup'));
-//         console.log("Hello");
-//         //anchor.click();
-//       }
-
-//       const click_link = document.getElementById("abcd");
-//       console.log(app_intend);
-//       if (app_intend === "Desktop" || app_intend === "Mobile") {
-//         app_intend = originalURL;
-//       }
-//       if (this.state.ostype == "windows") {
-//         click_link.setAttribute("href", app_intend);
-//         click_link.click();
-//         // click_link.dispatchEvent(new MouseEvent('mousedown'));
-//         // click_link.dispatchEvent(new MouseEvent('mouseup'));
-
-//       } else {
-//         click_link.setAttribute("href", app_intend);
-//         window.location.assign(app_intend);
-//       }
-//     });
-//   }
-
-//   render() {
-//     return (
-
-//       <div className={classes.mainContainer}>
-//         <div className="App">
-
-//           {/* <GoogleAd slot="1295882794" googleAdId="ca-pub-5645705217995911"/> */}
-
-//           <div className="container-1">
-//             <img src={logo} alt="deet" />
-//             {/* <span>{`OPNR.app`}</span> */}
-//             <a href="https://opnr.app" target="_blank">
-//                 {`OPNR.app`}
-//             </a>
-//             <br/>
-//             <a id="abcd" target="_blank">
-//               <button>{`Continue to the Link`}</button>
-//             </a>
-//           </div>
-
-//           {/* <GoogleAd slot="4955640795" googleAdId="ca-pub-5645705217995911"/> */}
-
-//           <div className="container-2">
-//             <a
-//                 href="https://opnr.app/"
-//                 target="_blank"
-//                 style={{ textDecoration: "none" }}
-//             >
-//                 <img
-//                 src={deetpng}
-//                 alt="Win an iPhone14 Pro in just ₹150"
-//                 style={{ width: "100%", height: "100%" }}
-//                 />
-//             </a>
-//             <div>
-//               {/* <iframe width="360" height="270" src="https://www.youtube-nocookie.com/embed/zm6xa3ggt5A?controls=0&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */}
-//               {/* <iframe width="363" height="271" src="https://www.youtube.com/embed/zm6xa3ggt5A?autoplay=1" title="BB Ki Vines Productions- Taaza Khabar | Hotstar Specials | Official Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */}
-//               {/* <iframe width="360" height="270" src="https://www.youtube.com/embed/zm6xa3ggt5A?controls=0&amp;start=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */}
-//               {/* <iframe width="420" height="315" src="https://www.youtube.com/embed/1k3HXPRDvCo?autoplay=1&mute=1"></iframe> */}
-//             </div>
-//           </div>
-
-//         </div>
-//       </div>
-//     );
-//   }
-// }
-
-// export default Splash;
-
-//  CODE FOR GAURAV ARORA AND TESTING    .......//
-
 import { Component } from "react";
 import React from "react";
 import classes from "../components/Styles.module.css";
 import { getURLandredirect } from "../helper/api";
 import "../css/splash.css";
-import logo from "../assets/logo.avif";
-import hel from "../assets/helmet.avif";
-import profilepic from "../assets/profile-pic.png";
-import wrap from "../assets/Stars.png";
-import ig from "../assets/insta.svg";
-import yt from "../assets/youtube.svg";
-import li from "../assets/linkedin.svg";
-import mail from "../assets/mail.svg";
-import png from "../assets/aprilf.png";
+import logo from "../assets/logo.png";
+import new_logo from "../assets/Omni-logo.png";
+import deetmelogo from "../assets/deet-me-logo.png";
+import DeetLogo from "../assets/deet-logo.png";
+import AdUI from "../assets/ui.png";
+import deetbg from "../assets/deet.png"
+import appopener_text from "../assets/ac.png";
 import GoogleAd from "../components/GoogleAd";
-import venuspng from "../assets/venus.png";
-// import SplashCard from "../components/SplashCard";
-// import dummyData from "../dummyData";
-import Card from "@mui/material/Card";
-import t1 from "../assets/t1.jpg";
-// import PromotionSection from "../components/PromotionSection";
 //import splash_adv from "../assets/splash/splash_adv.png";
-import { makeStyles } from "@material-ui/core/styles";
+
 
 class Splash extends Component {
   constructor(props) {
@@ -157,40 +21,14 @@ class Splash extends Component {
   }
 
   componentDidMount() {
-    //console.log("Here");
     let apptag = this.props.match.params.apptype;
     let shortstring = this.props.match.params.shorturl;
     getURLandredirect(apptag, shortstring).then((res) => {
       this.setState({ intentvalue: res.data.app_intend });
       this.setState({ original_url: res.data.originalURL });
       this.setState({ ostype: res.data.os_type });
-      this.setState({ createdAt: res.data.created_at });
       let app_intend = this.state.intentvalue;
       let originalURL = this.state.original_url;
-
-      const urlDate = new Date(this.state.createdAt);
-      console.log(this.state.createdAt);
-      const finalDate = new Date("2033-01-07");
-
-      // TEST
-      // let anchor = document.createElement("a");
-      // anchor.setAttribute("href", "https://www.google.com/");
-      // anchor.dispatchEvent(new MouseEvent('mousedown'));
-      // anchor.dispatchEvent(new MouseEvent('mouseup'));
-      // anchor.click();
-
-      if (urlDate <= finalDate) {
-        console.log("here");
-        var newLink = "https://appopener.com/" + apptag + "/" + shortstring;
-        console.log(newLink);
-        let anchor = document.createElement("a");
-        anchor.setAttribute("href", newLink);
-        console.log(anchor);
-        anchor.dispatchEvent(new MouseEvent("mousedown"));
-        anchor.dispatchEvent(new MouseEvent("mouseup"));
-        console.log("Hello");
-        //anchor.click();
-      }
 
       const click_link = document.getElementById("abcd");
       console.log(app_intend);
@@ -199,10 +37,8 @@ class Splash extends Component {
       }
       if (this.state.ostype == "windows") {
         click_link.setAttribute("href", app_intend);
-
         click_link.click();
-        // click_link.dispatchEvent(new MouseEvent('mousedown'));
-        // click_link.dispatchEvent(new MouseEvent('mouseup'));
+        //console.log("hello")
       } else {
         click_link.setAttribute("href", app_intend);
         window.location.assign(app_intend);
@@ -212,258 +48,106 @@ class Splash extends Component {
 
   render() {
     return (
-      <>
+      // <div className={classes.mainContainer}>
+
+      //     {/* <h1>Splash page - {this.props.match.params.apptype}</h1>
+      //     <a href={this.state.intentvalue}>{this.state.intentvalue}</a> */}
+
+      //     <div className = 'heading'>
+      //         <a href="https://midas.appopener.com/">
+      //             <img src={new_logo} style={{"width": "210px"}} alt="AppOpener" />
+      //         </a>
+      //     </div>
+      //     <div className= 'heading'>
+      //         <h1 style={{color:"#fd5331", "margin-top": "1px"}}>Name is verse, Omniverse!</h1>
+      //     </div>
+      //     <div className='heading'>
+      //         <p className="title-text" style={{fontFamily:"monospace",fontSize:"17px", "margin-top": ".05px"}}>Building towards Web 3.0</p>
+      //     </div>
+
+      //     <center style={{"margin-top": "22px"}}>
+      //     <a id="abcd" target="_blank" style={{"text-decoration": "none", "font-size": "30px", "font-family": "monospace","backgroundColor":"#ffc107","padding":"10px 20px 10px 20px"}}>Continue</a>
+      //     </center>
+      //     <center style={{"margin-top": "33px"}}>
+      //         {/* <a href="https://www.appopener.com/open">
+      //             <img class="rotate" id="sticker" src={appopener_text} alt="AppOpener" />
+      //             </a> */}
+
+      //         <p style={{fontFamily:"monospace",fontSize:"16px"}}>"Genie, You are free!"<br/>Date: 27.12.2022<br/>Time: 12:29:29 - 0:00:00<br/>Speed: 90000 sec/day</p>
+      //         <br/>
+
+      //         <p style={{fontFamily:"monospace",fontSize:"15px"}}>Click below for more!</p>
+      //         <a href="https://deet.me/dheet">
+      //             <img src={deetmelogo} style={{"width": "180px"}} alt="AppOpener" />
+      //         </a>
+      //         <br/>
+      //         <h1 style={{color:"#fd5331"}}>deet.me for ढीट</h1>
+
+      //     </center>
+
+      //     {/* <center>
+      //         <p class="text" style={{"margin-top": "50px"}}>Boosting Your Link ....</p>
+      //         </center> */}
+
+      //     {/* <div className="poster_container">
+      //         <center>
+      //         <a href="https://yellowdiary.appopener.com/" target="_blank">
+      //                 <img class="splash_poster img-responsive" src={splash_adv} alt="AppOpener" />
+      //             </a>
+      //             </center>
+      //         </div> */}
+
+      //     {/* <center>
+      //         <p class="footer">
+      //             <br /><br/>
+      //             <p style={{"float":"left","marginLeft":"10px",fontFamily:"monospace",fontSize:"15px"}}>Click here -></p>
+      //         </p>
+      //     </center> */}
+
+      // </div>
+
+      // </>
+      <div className={classes.mainContainer}>
         <div className="App">
-          <div>
-            {/* <GoogleAd slot="9492391764" googleAdId="ca-pub-5645705217995911" /> */}
-            <div className="container-1">
-              {/* <img src={logo} alt="deet" /> */}
-              {/* <span>{`OPNR.app`}</span> */}
-              <a href="https://appopener.com" target="_blank">
-                APPOPENER
-              </a>
 
-              <div className="profile">
-                <div className="bio-info">
-                  {/* <h2 style={{color:'white'}}>APPOPENER &#8594;	 OPNR.APP</h2> */}
-                  {/* <h2 style={{ color: "white", fontSize: "13px" }}>
-                    <b>~ by Dr. DANDY</b>
-                  </h2> */}
+          <GoogleAd slot="1295882794" googleAdId="ca-pub-5645705217995911"/>
 
-                </div>
+          <div className="container-1">
+            {/* <img src={DeetLogo} alt="deet" />
+            <span>{`deet.me`}</span>
+            <a href="https://www.deet.me" target="_blank">
+                {`Claim your free deetname now! ➟`}
+            </a>
+            <br/> */}
+            <a id="abcd" target="_blank">
+              <button>{`Continue to the Link`}</button>
+            </a>
+          </div>
 
-                <div className="social-links">
-                  <a href="https://opnr.app/yt/8gqth12j3">
-                    <img src={yt} />
-                  </a>
-                  <a href="https://www.instagram.com/opnr.app/">
-                    <img src={ig} />
-                  </a>
-                  <a href="https://opnr.app/lk/go4xn3nnw">
-                    <img src={li} />
-                  </a>
-                  <a href="mailto:namanlies@gmail.com">
-                    <img src={mail} />
-                  </a>
-                </div>
+          <GoogleAd slot="4955640795" googleAdId="ca-pub-5645705217995911"/>
 
-                {/* <div className="bio-text">
-                  <p>
-                    (A next generation PWA to overpower next web 3.0 revolution
-                    to rescue human research and resources for evolution)
-                  </p>
-                </div> */}
-
-                
-
-                <br/>
-
-                <div className="link-btn">
-                  <a id="abcd" target="_blank">
-                    <button>{`CONTINUE TO THE LINK`}</button>
-                  </a>
-                </div>
-
-                {/* <div className="subscribe-section">
-                  <img src={profilepic}/>
-                  <h3>Dr. Dheet Dandy</h3>
-                  <button>Subscribe</button>
-                </div> */}
-
-                {/* <div><PromotionSection /></div> */}
-              </div>
+          <div className="container-2">
+            {/* <a
+                href="https://www.instagram.com/er.dheet/"
+                target="_blank"
+                style={{ textDecoration: "none" }}
+            >
+                <img
+                src={deetpng}
+                alt="Win an iPhone14 Pro in just ₹150"
+                style={{ width: "100%", height: "100%" }}
+                />
+            </a> */}
+            <div>
+              {/* <iframe width="360" height="270" src="https://www.youtube-nocookie.com/embed/zm6xa3ggt5A?controls=0&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */}
+              {/* <iframe width="363" height="271" src="https://www.youtube.com/embed/zm6xa3ggt5A?autoplay=1" title="BB Ki Vines Productions- Taaza Khabar | Hotstar Specials | Official Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */}
+              {/* <iframe width="360" height="270" src="https://www.youtube.com/embed/zm6xa3ggt5A?controls=0&amp;start=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */}
+              {/* <iframe width="420" height="315" src="https://www.youtube.com/embed/1k3HXPRDvCo?autoplay=1&mute=1"></iframe> */}
             </div>
           </div>
+
         </div>
-
-        <div>
-                  <GoogleAd slot="9492391764" googleAdId="ca-pub-5645705217995911" />
-                </div>
-
-        {/* <div className="bio-text-2">
-          <p>
-            Want a boost to your video?<br/> Publish your videos @Creators.College
-          </p>
-        </div> */}
-
-        <div>
-        {/* <div style={{ color: "white", padding: "10px", fontSize: "20px" }}>
-            Watch and have fun:
-          </div> */}
-        
-        {/* <div className="yt-col">
-              <Card
-                sx={{ height: 315, marginBottom: "20px", borderRadius: "30px" }}
-                className="splash-card"
-              >
-                <iframe
-                  width="100%"
-                  height="315"
-                  src="https://www.youtube.com/embed/BtFjvDv1KEo"
-                  title="YouTube video player"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowfullscreen
-                ></iframe>
-              </Card>
-            </div> */}
-
-        <GoogleAd slot="9492391764" googleAdId="ca-pub-5645705217995911" />
-          
-
-        {/* <div className="yt-col">
-              <Card
-                sx={{ height: 315, marginBottom: "20px", borderRadius: "30px" }}
-                className="splash-card"
-              >
-                <iframe
-                  width="100%"
-                  height="315"
-                  src="https://www.youtube.com/embed/1k3HXPRDvCo"
-                  title="YouTube video player"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowfullscreen
-                ></iframe>
-              </Card>
-            </div> */}
-
-        {/* <GoogleAd slot="9338940957" googleAdId="ca-pub-5645705217995911" />
-            <br /> */}
-
-        {/* <div className="bio-text">
-                  <p>
-                    Feature your video here      
-                    <span> &#8623;</span>
-                  </p>
-            </div> */}
-
-        {/* <div className="yt-col">
-              <Card
-                sx={{ height: 315, marginBottom: "20px", borderRadius: "30px" }}
-                className="splash-card"
-              >
-                <iframe
-                  width="100%"
-                  height="315"
-                  src="https://www.youtube.com/embed/sbv7E8fOMeA"
-                  title="YouTube video player"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowfullscreen
-                ></iframe>
-              </Card>
-            </div> */}
-
-        {/* <div className="yt-col">
-              <Card
-                sx={{ height: 315, marginBottom: "20px", borderRadius: "30px" }}
-                className="splash-card"
-              >
-                <iframe
-                  width="100%"
-                  height="315"
-                  src="https://www.youtube.com/embed/wE0Io-GNOcA"
-                  title="YouTube video player"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowfullscreen
-                ></iframe>
-              </Card>
-            </div> */}
-
-        {/* <div className="yt-col">
-              <Card
-                sx={{ height: 315, marginBottom: "20px", borderRadius: "30px" }}
-                className="splash-card"
-              >
-                <iframe
-                  width="100%"
-                  height="315"
-                  src="https://www.youtube.com/embed/rnvuCY2HQ6w"
-                  title="YouTube video player"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowfullscreen
-                ></iframe>
-              </Card>
-            </div> */}
-
-        {/* <GoogleAd slot="9492391764" googleAdId="ca-pub-5645705217995911" />
-            <br />
-
-            <div className="yt-col">
-              <Card
-                sx={{ height: 315, marginBottom: "20px", borderRadius: "30px" }}
-                className="splash-card"
-              >
-                <iframe
-                  width="100%"
-                  height="315"
-                  src="https://www.youtube.com/embed/XD0A9rcBGiw"
-                  title="YouTube video player"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowfullscreen
-                ></iframe>
-              </Card>
-            </div>
-
-            <GoogleAd slot="9492391764" googleAdId="ca-pub-5645705217995911" />
-            <br />
-
-            <div className="yt-col">
-              <Card
-                sx={{ height: 315, marginBottom: "20px", borderRadius: "30px" }}
-                className="splash-card"
-              >
-                <iframe
-                  width="100%"
-                  height="315"
-                  src="https://www.youtube.com/embed/rjtvH6q5RRE"
-                  title="YouTube video player"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowfullscreen
-                ></iframe>
-              </Card>
-            </div> */}
-        </div>
-
-        {/* <div className="container-2">
-             <a
-                 href="https://opnr.app/"
-                 target="_blank"
-                 style={{ textDecoration: "none" }}
-             >
-                 <img
-                 src={png}
-                 alt=""
-                 style={{ width: "100%", height: "100%" }}
-                 />
-             </a>
-        </div> */}
-
-        {/* <GoogleAd slot="9492391764" googleAdId="ca-pub-5645705217995911" /> */}
-
-        {/* <div style={{width:'500px'}}>
-          <GoogleAd slot="9103123923" googleAdId="ca-pub-5645705217995911" />
-        </div> */}
-
-        {/* <div className="container-2">
-          {
-              dummyData.map((val,ind)=>(
-            <SplashCard details={val} ostype={this.state.ostype} />
-           
-            ))} */}
-
-        {/* <div>
-          <iframe width="360" height="270" src="https://www.youtube-nocookie.com/embed/zm6xa3ggt5A?controls=0&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          <iframe width="363" height="271" src="https://www.youtube.com/embed/zm6xa3ggt5A?autoplay=1" title="BB Ki Vines Productions- Taaza Khabar | Hotstar Specials | Official Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          <iframe width="360" height="270" src="https://www.youtube.com/embed/zm6xa3ggt5A?controls=0&amp;start=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          <iframe width="420" height="315" src="https://www.youtube.com/embed/1k3HXPRDvCo?autoplay=1&mute=1"></iframe>
-        </div> */}
-      </>
+      </div>
     );
   }
 }
