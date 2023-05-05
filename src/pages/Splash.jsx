@@ -291,7 +291,7 @@ class Splash extends Component {
             Watch and have fun:
           </div> */}
         
-        <div className="yt-col">
+        {/* <div className="yt-col">
               <Card
                 sx={{ height: 315, marginBottom: "20px", borderRadius: "30px" }}
                 className="splash-card"
@@ -306,7 +306,7 @@ class Splash extends Component {
                   allowfullscreen
                 ></iframe>
               </Card>
-            </div>
+            </div> */}
 
         <GoogleAd slot="9492391764" googleAdId="ca-pub-5645705217995911" />
           
