@@ -110,7 +110,7 @@ class Splash extends Component {
       <div className={classes.mainContainer}>
         <div className="App">
 
-          <GoogleAd slot="1295882794" googleAdId="ca-pub-5645705217995911"/>
+          <GoogleAd slot="6552881547" googleAdId="ca-pub-5645705217995911"/>
 
           <div className="container-1">
             {/* <img src={DeetLogo} alt="deet" />
